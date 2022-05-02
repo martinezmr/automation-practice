@@ -11,3 +11,12 @@ else:
     print("Statement is false")
 
 #if statement with elif
+y = 10
+z = 4
+if y == z:
+    print("They are equal")
+elif y < z:
+        print("Z is greater")
+else:
+    print("Y is greater")
+    
