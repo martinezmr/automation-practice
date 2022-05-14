@@ -3,6 +3,8 @@ word_set = set(["spam", "eggs", "sausage"])
 
 print(3 in num_set)
 print("spam" not in word_set)
+print("spam" not in word_set)
+print("spam" not in word_set)
 
 
 nums = {1, 2, 1, 3, 1, 4, 5, 6}

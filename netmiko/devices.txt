@@ -1,0 +1,5 @@
+(10.0.0.255, cisco_ios)
+(10.0.0.254, cisco_ios)
+(10.0.0.253, cisco_ios)
+(10.0.0.252, cisco_ios)
+
