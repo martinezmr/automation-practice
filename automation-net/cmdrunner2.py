@@ -13,7 +13,9 @@ devices = '''
 device_type = 'cisco_ios'
 username = 'cisco'
 password = 'cisco'
-connection = netmiko.ConnectHandler()
+
+for device in devices:
+    connection = netmiko.ConnectHandler(ip=device, device_type=device_type, username=username, password=password)
 #connects to device
 connection
 #prints the command
