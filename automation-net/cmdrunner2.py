@@ -16,9 +16,10 @@ password = 'cisco'
 
 for device in devices:
     connection = netmiko.ConnectHandler(ip=device, device_type=device_type, username=username, password=password)
+    print(connection.send_command('sh ip int brief'))
+    connection.disconnect()
 #connects to device
-connection
+#connection
 #prints the command
-print(connection.send_command('sh ip int brief'))
+
 #disconnects from device
-connection.disconnect()
