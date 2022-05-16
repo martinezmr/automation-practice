@@ -25,7 +25,7 @@ def get_credentials():
 
 netmiko_exceptions = (netmiko.ssh_exception.NetMikoTimeoutException, netmiko.ssh_exception.NetMikoAuthenticationException)
 
-usrname, password = get_credentials()
+username, password = get_credentials()
 
 with open('devices.json') as dev_file:
     devices = json.load(dev_file)
