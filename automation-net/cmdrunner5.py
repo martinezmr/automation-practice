@@ -37,7 +37,7 @@ for device in devices:
         print('~'*79)
         print('Connecting to device', device['ip'])
         connection = netmiko.ConnectHandler(**device)
-        print(connection.send_command('sh ip int status'))
+        print(connection.send_command('sh ip int brief'))
         connection.disconnect()
     except netmiko_exceptions as e:
         print('Failed to ', device['ip'], e)
