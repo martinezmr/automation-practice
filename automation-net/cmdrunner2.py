@@ -12,7 +12,7 @@ device_type = 'cisco_ios'
 username = 'cisco'
 password = 'cisco'
 
-netmiko_exceptions = (netmiko.ssh_exception.NetMikoTimeoutException, netmiko.ssh_exception.NetmikoAuthenticationException)
+netmiko_exceptions = (netmiko.ssh_exception.NetMikoTimeoutException, netmiko.ssh_exception.NetMikoAuthenticationException)
 
 for device in devices:
     try:
