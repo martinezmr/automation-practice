@@ -1,12 +1,10 @@
 [
     {
         "ip": "192.168.73.131",
-        "device_type": "cisco_ios",
-        "username": "cisco",
-        "password": "cisco"},
+        "device_type": "cisco_ios"
+    },
     {
         "ip": "192.168.73.133",
-        "device_type": "cisco_ios",
-        "username": "cisco",
-        "password": "cisco"}
+        "device_type": "cisco_ios"
+    }
 ]
