@@ -13,9 +13,14 @@ username = 'cisco'
 password = 'cisco'
 
 for device in devices:
-    connection = netmiko.ConnectHandler(ip=device, device_type=device_type, username=username, password=password)
-    print(connection.send_command('sh ip int brief'))
-    connection.disconnect()
+    try:
+        print('~'*79)
+        print('Connecting to device ', device)
+        connection = netmiko.ConnectHandler(ip=device, device_type=device_type, username=username, password=password)
+        print(connection.send_command('sh ip int brief'))
+        connection.disconnect()
+    except netmiko.ssh_exception.NetMikoAuthenticationException:
+        print('autnentication failed to ', device)
 #connects to device
 #connection
 #prints the command
