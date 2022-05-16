@@ -1,5 +1,12 @@
-(10.0.0.255, cisco_ios)
-(10.0.0.254, cisco_ios)
-(10.0.0.253, cisco_ios)
-(10.0.0.252, cisco_ios)
-
+[
+    {
+        "ip": "192.168.73.131",
+        "device_type": "cisco_ios",
+        "username": "cisco",
+        "password": "cisco"},
+    {
+        "ip": "192.168.73.133",
+        "device_type": "cisco_ios",
+        "username": "cisco",
+        "password": "cisco"}
+]
