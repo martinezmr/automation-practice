@@ -1,13 +1,13 @@
 #!/usr/bin/env python
-
+#creates multiple files from output commands
 from __future__ import absolute_import, division, print_function
-from cgi import test
 
 import netmiko
 import json
 import mytools
 import sys
 import signal
+import os
 
 signal.signal(signal.SIGPIPE, signal.SIG_DFL) #IOError: Broken pipe
 signal.signal(signal.SIGINT, signal.SIG_DFL) #KeyboardInterrupt: Ctrl-C
@@ -35,11 +35,13 @@ for device in devices:
         print('~'*79)
         print('Connecting to device', device['ip'])
         connection = netmiko.ConnectHandler(**device)
-        filename = connection.base_prompt + ' .txt'
-        with open(filename, 'w') as out_file:
-                for command in commands:
-                    out_file.write('## Output of ' + command + '\n\n')
-                    out_file.write(test + '\n\n')
+        newdir = connection.base_promptos.mkdir(newdir)
+        os.mkdir(newdir)
+        for command in commands:
+            filename = command.replace(' ', '_') + ' .txt'
+            filename = '/'.join((newdir, filename))
+            with open(filename, 'w') as out_file:
+                    out_file.write(connection.send_commands(command) + '\n')
         connection.disconnect()
     except netmiko_exceptions as e:
         print('Failed to ', device['ip'], e)
