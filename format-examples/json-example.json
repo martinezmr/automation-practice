@@ -1,0 +1,31 @@
+{"People":
+    [
+        {
+            "Id": 1,
+            "FirstName": "Benjamin",
+            "LastName": "Finkel",
+            "Email": "ben.finkel@cbtnuggets.com",
+            "Active": true
+        },
+        {
+            "Id": 2,
+            "FirstName": "Jane",
+            "LastName": "Doe",
+            "Email": "jane.doe@cbtnuggets.com",
+            "Active": false
+        },
+        {
+            "Id": 3,
+            "FirstName": "Pat",
+            "LastName": "Smith",
+            "Email": "path.smith@cbtnuggets.com",
+            "Active": true
+        },
+        {
+            "Id": 4,
+            "Name": ["brackets", "make", "an", "array"],
+            "Email": {"PE": "thisisasuboject@gmail.com", "SE": "poop@aol.com"},
+            "Active": true
+        }
+    ]
+}

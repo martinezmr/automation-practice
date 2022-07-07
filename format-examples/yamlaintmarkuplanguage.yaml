@@ -1,0 +1,35 @@
+---
+people:
+- Id: 1
+  Code: 524.37
+  FirstName: Benjamin
+  LastName: Finkel
+  Email: ben.finkel@cbtnuggets.com
+  Active: true
+- Id: 2
+  Code: 813.09
+  FirstName: Jane
+  LastName: Doe
+  Email: jane.doe@cbtnuggets.com
+  Active: true
+- Id: 3
+  Code: 102.9
+  FirstName: Pat
+  LastName: Smith
+  Email: path.smith@cbtnuggets.com
+  Active: false
+... # Indicate the end of a document
+--- # This is the start of a new document in YAML
+item1: item1value
+item2: item2value
+people: hello!
+...
+---
+ANumber: 145 # recognized as integer
+AFloat: 19.8075 # recognized as a floating point number
+AString: Hello there Ben! # extra lines do not get intepreted on a diff line
+AQuotedString: "Quotes are perfectly acceptable." # you can use \n to do a new line 
+Active: True # boolean datatypes
+people: hello!
+...
+
