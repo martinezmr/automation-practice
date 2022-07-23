@@ -53,26 +53,26 @@ def config_work( devices_and_creds ):
             print(hostname)
         
         except NetMikoTimeoutException:
-            print(f'Device Timeout for {device['ipaddr']}')
+            print(f'Device Timeout for {device["ipaddr"]}')
             now = datetime.now()
             with open(f'exceptions.log', 'a+') as exc:
-                exc.write(f'{device['ipaddr']}) had a timeout exception at {now}.\n')
+                exc.write(f'{device["ipaddr"]}) had a timeout exception at {now}.\n')
         
         except NetMikoAuthenticationException:
-            print(f'Authentication failed for {device['ipaddr']}')
+            print(f'Authentication failed for {device["ipaddr"]}')
             now = datetime.now()
             with open(f'exceptions.log', 'a+') as exc:
-                exc.write(f'{device['ipaddr']}) had an authentication exception at {now}.\n')
+                exc.write(f'{device["ipaddr"]}) had an authentication exception at {now}.\n')
 
         except SSHException:
-            print(f'SSH failed for {device['ipaddr']}')
+            print(f'SSH failed for {device["ipaddr"]}')
             with open(f'exceptions.log', 'a+') as exc:
-                exc.write(f'{device['ipaddr']}) had an SSH exception.\n')
+                exc.write(f'{device["ipaddr"]}) had an SSH exception.\n')
 
         except Exception:
-            print(f'Exception for {device['ipaddr']}')
+            print(f'Exception for {device["ipaddr"]}')
             with open(f'exceptions.log', 'a+') as exc:
-                exc.write(f'{device['ipaddr']}) had a general exception.  See log for more information.\n')
+                exc.write(f'{device["ipaddr"]}) had a general exception.  See log for more information.\n')
             logging.error(traceback.format_exc())
 
     return
