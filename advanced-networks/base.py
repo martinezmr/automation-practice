@@ -27,7 +27,7 @@ def read_devices(devices_filename):
     print('\n------devices----------------------')
     return devices
 
-def config_work(devices_and_creds):
+def config_worker(devices_and_creds):
     device = devices_and_creds
     username = eid
     creds = password
