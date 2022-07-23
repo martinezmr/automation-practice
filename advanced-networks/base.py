@@ -15,7 +15,7 @@ import re
 import pandas as pd
 from openpyxl import Workbook, load_workbook
 
-def read_devices( devices_filename ):
+def read_devices(devices_filename):
     devices = {} # create our dictionary for storing devices and their info
     with open( devices_filename ) as devices_file:
         for device_line in devices_file:
@@ -27,7 +27,7 @@ def read_devices( devices_filename ):
     print('\n------devices----------------------')
     return devices
 
-def config_work( devices_and_creds ):
+def config_work(devices_and_creds):
     device = devices_and_creds
     username = eid
     creds = password
@@ -45,8 +45,8 @@ def config_work( devices_and_creds ):
         print('-----Getting Config from Device----')
         try:
 
-            session = ConnectHandler( device_type=device_type, ip=device['ipaddr'],
-                        username=username, password=password, banner_timeout=400, global_delay_factor=4 )
+            session = ConnectHandler(device_type=device_type, ip=device['ipaddr'],
+                        username=username, password=password, banner_timeout=400, global_delay_factor=4)
 
             #type cisco commands below
             hostname = session.send_command('sh run | i hostname')
@@ -82,7 +82,7 @@ def config_work( devices_and_creds ):
 eid = input('Username: ')
 password = getpass()
 
-devices = read_devices( ' devices-file.txt ')
+devices = read_devices('devices-file.txt')
 num_threads = 25
 
 config_params_list = []
