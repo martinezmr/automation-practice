@@ -98,4 +98,4 @@ results = threads.map( config_worker, config_params_list )
 threads.close()
 threads.join()
 
-print('\n---- End get config threadpool, elapsed time= ' time()-starting_time)
+print('\n---- End get config threadpool, elapsed time= ', time()-starting_time)
