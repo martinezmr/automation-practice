@@ -50,6 +50,7 @@ def config_worker(devices_and_creds):
 
             #type cisco commands below
             hostname = session.send_command('sh run | i hostname')
+            hostname = hostname.split()
             print(hostname)
         
         except NetMikoTimeoutException:
