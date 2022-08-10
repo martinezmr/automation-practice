@@ -1,4 +1,3 @@
-import imp
 import napalm
 import json
 from pprint import pprint
