@@ -1,7 +1,14 @@
 
-list = [1,'d',3,'g',4,6,'a',8]
-for i in list:
-    if type(i) == int:
-        print(i)
-    else:
-        print('wrong')
+# x = 'Global/BackOffice/Mclean/123 Street'
+
+# l = x.split('/')
+# l = l[2:]
+# y = '/'.join(l)
+# print(y)
+
+keys = ['1','2','3','4']
+dict = {}
+for i in keys:
+    dict.setdefault(i, '0')
+
+print(dict.keys())

@@ -1,10 +1,19 @@
-import re
-text = input()
-#your code goes here
-#use re.findall() with r"#\w+" as the regex
-pattern = r"#\w+"
+x = ['ustxb41916sw01', 'ustxb41916sw02']
 
-match = re.findall(pattern, text)
+l = []
+for i in x:
+    j1 = i[:10] + 'sd01'
+    j2 = i[:10] + 'sd02'
+    l.append(j1)
+    l.append(j2)
 
-if match:
-    print("\n".join(match))
+y= []
+for i in l:
+    if i not in y:
+        y.append(i)
+
+print(y)
+
+j = []
+j = j.append(' ')
+print(j)
